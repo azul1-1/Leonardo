@@ -23,6 +23,9 @@ Route::get('/', function () {
     return view('layouts.base');
 });
 
+Route::get('/table', [App\Http\Controllers\HomeController::class, 'bookingShow']);
+
+
 
 Auth::routes([
     'verify'=>true
@@ -69,6 +72,15 @@ Route::get('/mail',function(){
 });
 
 
+Route::get('/bookingStore', [App\Http\Controllers\HomeController::class, 'bookingStore']);
+
+Route::get('/booking', [App\Http\Controllers\HomeController::class, 'bookingForm']);
 
 
+Route::get('/item/edit/{id}', [App\Http\Controllers\HomeController::class, 'edit'])->name('item.edit');
 
+
+Route::get('/item/delete/{id}', [App\Http\Controllers\HomeController::class, 'delete'])->name('item.edit');
+
+
+Route::get('/item/update/{id}', [App\Http\Controllers\HomeController::class, 'update']);
