@@ -13,7 +13,7 @@
    <input type="text" id="data3" name="book" value="{{$item->book}}"><br>
    <input type="submit" value="Submit">
 </form>
-    <title>Document</title>
+    <title>Locura</title>
 </head>
 <body>
     
