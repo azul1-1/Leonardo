@@ -309,6 +309,7 @@
 
                             @enderror
            </div>
+           <!--cambio-->
            
            <div class="form-group">
                <label for="input2">Email</label>
