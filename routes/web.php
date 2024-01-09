@@ -25,6 +25,7 @@ Route::get('/', function () {
 
 Route::get('/table', [App\Http\Controllers\HomeController::class, 'bookingShow']);
 
+/*cambio*/
 
 
 Auth::routes([
