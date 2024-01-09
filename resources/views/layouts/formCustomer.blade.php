@@ -296,7 +296,7 @@
             
                 <div class="container">
        <h1>Customer add</h1>
-       <form method="GET" action="/bookingStore">
+       <form method="GET" action="{{url('bookingStore')}}">
        @csrf
            <div class="form-group">
                <label for="input1">Name</label>
