@@ -84,4 +84,4 @@ Route::get('/item/edit/{id}', [App\Http\Controllers\HomeController::class, 'edit
 Route::get('/item/delete/{id}', [App\Http\Controllers\HomeController::class, 'delete'])->name('item.edit');
 
 
-Route::get('/item/update/{id}', [App\Http\Controllers\HomeController::class, 'update']);
+Route::get('/item/edit/update/{id}', [App\Http\Controllers\HomeController::class, 'update']);

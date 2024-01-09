@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     
-<form action="item/update/{{$item->id}}" method="post">
+<form action="update/{{$item->id}}" method="get">
 <meta charset="UTF-8">
     
    <label for="data1">Data 1:</label><br>
