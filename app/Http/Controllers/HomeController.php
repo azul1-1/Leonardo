@@ -123,3 +123,6 @@ return redirect('/table')->with('message','Listing delete successfully');
 
     
 }
+
+
+/*cambio*/
