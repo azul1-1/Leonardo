@@ -3,10 +3,10 @@
 
 @include('partials._head')
 
-<body id="page-top">
+<body class="bg-gradient-primary">
 
     <!-- Page Wrapper -->
-    <div id="wrapper">
+    <div id="wrapper bg-gradient-primary">
 
       
         <!-- Content Wrapper -->
@@ -17,18 +17,27 @@
 
             @include('partials._topbar')
 
-                <div>{{$slot}}</div>
+                
+             <div>{{$slot}}</div>
 
-
+             
+                </div>
     
 
      <!-- Footer -->
  
             <!-- End of Footer -->
-  
-
+            </div>
+</div>
+ 
 
                 
 
-                
-@include('partials._assets')
+
+@include('partials._assets')    
+</body>
+
+</html>
+
+
+

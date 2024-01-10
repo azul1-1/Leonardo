@@ -24,6 +24,7 @@ use Illuminate\Support\Facades\Mail;
 
 Route::get('/', function () {
     return view('layouts.base');
+    /*return view('components.home2');*/
 })->middleware('checkUserStatus');
 
 /*->middleware('checkUserStatus');*/
