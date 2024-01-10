@@ -21,7 +21,11 @@ use Illuminate\Support\Facades\Mail;
 
 Route::get('/', function () {
     return view('layouts.base');
-});
+})->middleware('checkUserStatus');
+
+
+
+/*->middleware('checkUserStatus');*/
 
 Route::get('/table', [App\Http\Controllers\HomeController::class, 'bookingShow']);
 
@@ -34,7 +38,7 @@ Auth::routes([
 
 Route::get('/dashboard', function () {
     return view('layouts.user');
-})->middleware(['auth', 'verified'])->name('dashboard');
+})->middleware(['auth'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
