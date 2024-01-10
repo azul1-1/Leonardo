@@ -292,21 +292,31 @@
                     </ul>
 
                 </nav>
+                
 
-            
-                <table class="table">
- <thead>
-   <tr>
-     <th scope="col">#</th>
-     <th scope="col">Name</th>
-     <th scope="col">Email</th>
-     <th scope="col">Date</th>
-     <th scope="col">Delete</th>
-     <th scope="col">Edit</th>
-   </tr>
- </thead>
- <tbody>
-@foreach($dates as $book)
+                <!--table start-->
+
+                <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary d-flex justify-content-center">Customer Database</h6>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                    <th>#</th>
+                      <th>Name</th>
+                      <th>email</th>
+                      <th>date</th>
+                      <th>Delete</th>
+                      <th>Edit</th>
+                      
+                    </tr>
+                  </thead>
+                  
+                  <tbody>
+                  @foreach($dates as $book)
 <tr class="border border-slate-300"  >
 <td class="border border-slate-300" >{{$book['id']}}</td>
     <td class="border border-slate-300" >{{$book['name']}}</td>
@@ -316,12 +326,22 @@
     <td class="border border-slate-300" ><a href="{{ url('/item/edit',$book->id) }}" class="btn btn-primary rounded-button">edit</a></td>
 </tr>
 @endforeach
-   <!-- Add more rows as needed -->
- </tbody>
-</table>
+                    
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!--table finish-->
 
 
-<a href="{{ url('/booking') }}" class="btn btn-primary rounded-button">booking</a>
+
+            
+     
+
+<div class="d-flex  justify-content-center"> <a href="{{ url('/booking') }}" class="btn btn-primary rounded-button">booking</a></div>
+
 
     
 

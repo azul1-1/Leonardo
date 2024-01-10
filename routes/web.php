@@ -19,11 +19,12 @@ use Illuminate\Support\Facades\Mail;
 |
 */
 
+//Route::get('/', App\Http\Controllers\HomeController::class, 'index' ]);
+
+
 Route::get('/', function () {
     return view('layouts.base');
 })->middleware('checkUserStatus');
-
-
 
 /*->middleware('checkUserStatus');*/
 
