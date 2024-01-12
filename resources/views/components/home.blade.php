@@ -3,6 +3,9 @@
 
 @include('partials._head')
 
+
+
+
 <body class="bg-gradient-primary">
 
     <!-- Page Wrapper -->
