@@ -50,9 +50,6 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-Route::get('/sell', function () {
-    return view('layouts.sell');
-});
 
 Route::get('/admin',[App\Http\Controllers\AdminController::class,'index']);
 
@@ -91,3 +88,20 @@ Route::get('/item/delete/{id}', [App\Http\Controllers\HomeController::class, 'de
 
 
 Route::get('/item/edit/update/{id}', [App\Http\Controllers\HomeController::class, 'update']);
+
+
+Route::get('/cards', function () {
+    return view('layouts.cards');
+})->middleware(['auth']);
+
+Route::get('/colors', function () {
+    return view('layouts.colors');
+})->middleware(['auth']);
+
+Route::get('/sell', function () {
+    return view('layouts.sell');
+})->middleware(['auth']);
+
+Route::get('/buy', function () {
+    return view('layouts.buy');
+})->middleware(['auth']);
