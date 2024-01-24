@@ -35,7 +35,7 @@ class TwoFactorCode extends Notification
     public function toMail(object $notifiable): MailMessage
     {
         return (new MailMessage)
-                    ->line('Your two factor code is'.$notifiable->two_factor_code)
+                    ->line('Your two factor code is '.$notifiable->two_factor_code)
                     ->action('Verify here', route('verify.index'))
                     ->line('the code will expire in 10 minutes')
                     ->line('If you have not tried');
