@@ -124,7 +124,7 @@ Route::post('/email/verification-notification', function (Request $request) {
 })->middleware(['auth', 'throttle:6,1'])->name('verification.send');
 
 
-Route::get('verify/resend','Auth\TwoFactorController@resend')->name('verify.resend');
-Route::resource('verify','Auth\TwoFactorController@resend')->only(['index','store']);
+Route::get('/item/edit/update/{id}', [App\Http\Controllers\HomeController::class, 'update']);
 
-
+Route::get('verify/resend', 'App\Http\Controllers\Auth\TwoFactorController@resend')->name('verify.resend');
+Route::resource('verify', 'App\Http\Controllers\Auth\TwoFactorController')->only(['index', 'store']);
