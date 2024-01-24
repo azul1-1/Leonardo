@@ -1,5 +1,5 @@
 
-@section('content')
+
 <div class="row justify-content-center">
     <div class="col-md-8">
         <div class="card-group">
@@ -54,4 +54,3 @@
 <form id="logoutform" action="{{ route('logout') }}" method="POST" style="display: none;">
     {{ csrf_field() }}
 </form>
-@endsection
