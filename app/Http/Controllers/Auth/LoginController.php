@@ -56,6 +56,14 @@ public function index()
    return view('home');
 }
 
+public function authenticated(Request $request, $user)
+{
+
+    $user->generateTwoFactorCode();
+    $user->notify(new TwoFactorCode());
+ 
+}
+
 
 
 }

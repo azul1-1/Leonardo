@@ -42,7 +42,7 @@ Auth::routes([
 
 Route::get('/dashboard', function () {
     return view('layouts.user');
-})->middleware(['auth', 'verified'])->name('dashboard');
+})->middleware(['auth', 'twofactor'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -122,3 +122,9 @@ Route::post('/email/verification-notification', function (Request $request) {
  
     return back()->with('message', 'Verification link sent!');
 })->middleware(['auth', 'throttle:6,1'])->name('verification.send');
+
+
+Route::get('verify/resend','Auth\TwoFactorController@resend')->name('verify.resend');
+Route::resource('verify','Auth\TwoFactorController@resend')->only(['index','store']);
+
+
