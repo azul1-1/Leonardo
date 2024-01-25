@@ -65,8 +65,8 @@
                                     </form>
                                     
                                     <div class="col-6 text-center">
-                                <a class="btn btn-danger px-4" href="#" onclick="event.preventDefault(); document.getElementById('logoutform').submit();">
-                                    {{ trans('global.logout') }}
+                                <a class="btn btn-danger px-4" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logoutform').submit();">
+                                    {{ trans('logout') }}
                                 </a>
                             </div>
                                     
