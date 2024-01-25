@@ -37,7 +37,8 @@ Route::get('/table', [App\Http\Controllers\HomeController::class, 'bookingShow']
 
 
 Auth::routes([
-    'verify'=>true
+    'verify'=>true,
+    'twofactor'=>true
     ]);
 
 Route::get('/dashboard', function () {
