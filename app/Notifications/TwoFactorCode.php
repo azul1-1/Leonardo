@@ -31,7 +31,7 @@ class TwoFactorCode extends Notification
     public function toMail($notifiable)
     {
 
-        $noti = $notifiable->two_factor_code;
+        $notification = $notifiable->two_factor_code;
         $url = url(route('verify.index'));
         
         return (new MailMessage)
