@@ -19,18 +19,19 @@ class AuthenticatedSessionController extends Controller
     public function create(): View
     {
         return view('auth.loginNew');
+        $user->generateTwoFactorCode();
+        $user->notify(new TwoFactorCode());
     }
 
     /**
      * Handle an incoming authentication request.
      */
-    public function store(LoginRequest $request, $user): RedirectResponse
+    public function store(LoginRequest $request): RedirectResponse
     {
         $request->authenticate();
 
         $request->session()->regenerate();
-        $user->generateTwoFactorCode();
-        $user->notify(new TwoFactorCode());
+       
 
         /*return redirect()->intended(RouteServiceProvider::HOME);*/
         return redirect()->intended('/dashboard');
@@ -50,10 +51,5 @@ class AuthenticatedSessionController extends Controller
         return redirect('/');
     }
 
-    public function authenticated(Request $request, $user)
-{
-    $user->generateTwoFactorCode();
-    $user->notify(new TwoFactorCode());
- 
-}
+
 }
