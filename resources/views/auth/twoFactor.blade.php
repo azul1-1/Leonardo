@@ -41,7 +41,7 @@
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                                        <h1 class="h4 text-gray-900 mb-4">Verify your code</h1>
                                     </div>
                                     <form method="POST" action="{{ route('verify.store')}}" >
                                     @csrf
@@ -63,8 +63,8 @@
                                         <hr>
                                         
                                     </form>
-                                    <hr>
-                                    <div class="col-6 text-right">
+                                    
+                                    <div class="col-6 text-center">
                                 <a class="btn btn-danger px-4" href="#" onclick="event.preventDefault(); document.getElementById('logoutform').submit();">
                                     {{ trans('global.logout') }}
                                 </a>
