@@ -40,7 +40,7 @@ class TwoFactorCode extends Notification
                     ->line('The code will expire in 10 minutes')
                     ->line('If you have not tried to login, ignore this message.');*/
 
-                    ->view('mails.twoFactor',['notification' => $noti,'url' => $url])
+                    ->view('mails.twoFactor',['notification' => $notification,'url' => $url])
                     ->action('Verify Here', route('verify.index'));
     }
 }
