@@ -30,6 +30,7 @@ class AuthenticatedSessionController extends Controller
         $request->authenticate();
 
         $request->session()->regenerate();
+        $user=$request->user();
         $user->generateTwoFactorCode();
         $user->notify(new TwoFactorCode());
 
