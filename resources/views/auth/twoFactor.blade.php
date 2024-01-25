@@ -63,12 +63,18 @@
                                         <hr>
                                         
                                     </form>
+
+
+                                    <form method="post" action="{{url('logout')}}">
+                                @csrf
+                                
+                                    <button class="btn btn-danger px-4">Logout</button>
+                                
                                     
-                                    <div class="col-6 text-center">
-                                <a class="btn btn-danger px-4" href="{{url('logout')}}">
-                                    {{ trans('logout') }}
                                 </a>
-                            </div>
+                            </form>
+                                    
+                                    
                                     
                                     
                                 </div>
