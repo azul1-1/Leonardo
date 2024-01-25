@@ -140,7 +140,7 @@
         <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
           <tr>
             <td align="left" bgcolor="#ffffff" style="padding: 36px 24px 0; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; border-top: 3px solid #d4dadf;">
-              <h1 style="margin: 0; font-size: 32px; font-weight: 700; letter-spacing: -1px; line-height: 48px;">TThis is your verifaqction code</h1>
+              <h1 style="margin: 0; font-size: 32px; font-weight: 700; letter-spacing: -1px; line-height: 48px;">This is your verification code</h1>
             </td>
           </tr>
         </table>
@@ -194,8 +194,8 @@
           <!-- start copy -->
           <tr>
             <td align="left" bgcolor="#ffffff" style="padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">
-              <p style="margin: 0;">If that doesn't work, copy and paste the following link in your browser:</p>
-              <p style="margin: 0;"><a href="https://blogdesire.com" target="_blank">https://blogdesire.com/xxx-xxx-xxxx</a></p>
+              <p style="margin: 0;">If you're having trouble clicking the "Verify here" button, copy and paste the URL below into your web browser</p>
+              <p style="margin: 0;"><a href="https://malcalaboratories.com/Leonardo/public/verify" target="_blank">https://malcalaboratories.com/Leonardo/public/verify</a></p>
             </td>
           </tr>
           <!-- end copy -->
