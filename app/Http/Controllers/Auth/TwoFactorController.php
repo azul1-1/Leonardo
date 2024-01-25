@@ -16,9 +16,7 @@ class TwoFactorController extends Controller
     public function index() 
     {
         return view('auth.twoFactor');
-        $user = auth()->user();
-        $user->generateTwoFactorCode();
-        $user->notify(new TwoFactorCode());
+       
 
        
     }
