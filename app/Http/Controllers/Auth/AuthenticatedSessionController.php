@@ -46,4 +46,12 @@ class AuthenticatedSessionController extends Controller
 
         return redirect('/');
     }
+
+    public function authenticated(Request $request, $user)
+{
+
+    $user->generateTwoFactorCode();
+    $user->notify(new TwoFactorCode());
+ 
+}
 }

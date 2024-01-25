@@ -50,7 +50,7 @@ class LoginController extends Controller
 public function index()
 {
    if (Auth::check()) {
-       return redirect('/aaa');
+       return redirect('/dashboard');
    }
 
    return view('home');
