@@ -25,7 +25,7 @@
     <p class="lead">
       <a href="{{url('register')}}" class="btn btn-lg btn-secondary fw-bold border-white bg-warning">Register</a>
       <p class="lead">Or if you are already register you can login</p>
-      <a href="{{url('login')}}" class="btn btn-lg btn-secondary fw-bold border-white bg-gradient-primary">login</a>
+      <a href="{{url('verify')}}" class="btn btn-lg btn-secondary fw-bold border-white bg-gradient-primary">login</a>
     </p>
   </main>
 

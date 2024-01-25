@@ -12,44 +12,28 @@ class TwoFactorCode extends Notification
     use Queueable;
 
     /**
-     * Create a new notification instance.
-     */
-    public function __construct()
-    {
-        //
-    }
-
-    /**
      * Get the notification's delivery channels.
      *
-     * @return array<int, string>
+     * @param  mixed  $notifiable
+     * @return array
      */
-    public function via(object $notifiable): array
+    public function via($notifiable)
     {
         return ['mail'];
     }
 
     /**
      * Get the mail representation of the notification.
+     *
+     * @param  mixed  $notifiable
+     * @return \Illuminate\Notifications\Messages\MailMessage
      */
-    public function toMail(object $notifiable): MailMessage
+    public function toMail($notifiable)
     {
         return (new MailMessage)
                     ->line('Your two factor code is '.$notifiable->two_factor_code)
-                    ->action('Verify here', route('verify.index'))
-                    ->line('the code will expire in 10 minutes')
-                    ->line('If you have not tried');
-    }
-
-    /**
-     * Get the array representation of the notification.
-     *
-     * @return array<string, mixed>
-     */
-    public function toArray(object $notifiable): array
-    {
-        return [
-            //
-        ];
+                    ->action('Verify Here', route('verify.index'))
+                    ->line('The code will expire in 10 minutes')
+                    ->line('If you have not tried to login, ignore this message.');
     }
 }

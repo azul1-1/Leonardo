@@ -43,7 +43,7 @@ Auth::routes([
 
 Route::get('/dashboard', function () {
     return view('layouts.user');
-})->middleware(['auth', 'twofactor'])->name('dashboard');
+})->middleware(['twofactor','auth'])->name('dashboard');
 
 Route::middleware('auth','twofactor')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -54,10 +54,10 @@ Route::middleware('auth','twofactor')->group(function () {
 require __DIR__.'/auth.php';
 
 
-Route::get('/admin',[App\Http\Controllers\AdminController::class,'index']);
+Route::get('/admin',[App\Http\Controllers\AdminController::class,'index'])->middleware(['twofactor']);
 
 
-Route::get('/home',[App\Http\Controllers\HomeController::class,'index']);
+Route::get('/home',[App\Http\Controllers\HomeController::class,'index'])->middleware(['twofactor']);
 
 Route::get('/email/verify', function () {
     return view('auth.verify-email');
