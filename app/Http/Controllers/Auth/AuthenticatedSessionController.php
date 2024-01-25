@@ -7,6 +7,7 @@ use App\Http\Requests\Auth\LoginRequest;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use App\Notifications\TwoFactorCode;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 
@@ -23,11 +24,13 @@ class AuthenticatedSessionController extends Controller
     /**
      * Handle an incoming authentication request.
      */
-    public function store(LoginRequest $request): RedirectResponse
+    public function store(LoginRequest $request, $user): RedirectResponse
     {
         $request->authenticate();
 
         $request->session()->regenerate();
+        $user->generateTwoFactorCode();
+        $user->notify(new TwoFactorCode());
 
         /*return redirect()->intended(RouteServiceProvider::HOME);*/
         return redirect()->intended('/dashboard');
@@ -49,7 +52,6 @@ class AuthenticatedSessionController extends Controller
 
     public function authenticated(Request $request, $user)
 {
-
     $user->generateTwoFactorCode();
     $user->notify(new TwoFactorCode());
  
