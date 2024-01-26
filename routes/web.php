@@ -138,3 +138,7 @@ Route::post('/toggle-second-auth', 'App\Http\Controllers\VerifyController@toggle
 Route::get('/stripe','App\Http\Controllers\StripeController@index');
 Route::post('/stripeCheck','App\Http\Controllers\StripeController@checkout');
 Route::post('/stripeSuccess','App\Http\Controllers\StripeController@success');
+
+Route::any('{any}', function () {
+    return redirect('/');
+})->where('any', '.*');

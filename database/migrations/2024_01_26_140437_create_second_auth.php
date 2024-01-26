@@ -13,9 +13,6 @@ return new class extends Migration
     {
         Schema::table('users',function(Blueprint $table){
             $table->boolean('verify_confirmation')->default(false);
-            
-
-
         });
     }
 
