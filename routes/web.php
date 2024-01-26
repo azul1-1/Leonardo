@@ -134,3 +134,7 @@ Route::resource('verify', 'App\Http\Controllers\Auth\TwoFactorController')->only
 
 
 Route::post('/toggle-second-auth', 'App\Http\Controllers\VerifyController@toggleSecondAuth');
+
+Route::get('/stripe','App\Http\Controllers\StripeController@index');
+Route::post('/stripeCheck','App\Http\Controllers\StripeController@checkout');
+Route::post('/stripeSuccess','App\Http\Controllers\StripeController@success');
