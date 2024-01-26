@@ -29,7 +29,7 @@ $.ajax({
 
         $.ajax({
             type: "POST",
-            url: '/Leonardo/public/toggle-second-auth',
+            url: '{{url("toggle-second-auth")}}',
             data: {'verify_confirmation': hasSecondAuth, 'user_id': userId},
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
