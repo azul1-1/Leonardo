@@ -133,4 +133,4 @@ Route::get('verify/resend', 'App\Http\Controllers\Auth\TwoFactorController@resen
 Route::resource('verify', 'App\Http\Controllers\Auth\TwoFactorController')->only(['index', 'store']);
 
 
-Route::post('/toggle-second-auth', 'App\Http\Controllers\Auth\VerifyController@toggleSecondAuth')->name('toggle_second_auth');
+Route::post('/toggle-second-auth', 'App\Http\Controllers\VerifyController@toggleSecondAuth')->name('toggle_second_auth');
