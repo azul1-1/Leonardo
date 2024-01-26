@@ -18,7 +18,7 @@ class TwoFactor
     {
         $user = auth()->user();
 
-        if(Auth::check() && $user->two_factor_code)
+        if(Auth::check() && $user->two_factor_code && $request->user()->verify_confirmation)
         {
             if($user->two_factor_expires_at<now()) //expired
             {
