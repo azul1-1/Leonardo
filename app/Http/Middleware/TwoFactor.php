@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Middleware;
+use Illuminate\Support\Facades\Auth;
 
 use Closure;
 
@@ -17,7 +18,7 @@ class TwoFactor
     {
         $user = auth()->user();
 
-        if(auth()->check() && $user->two_factor_code)
+        if(Auth::check() && $user->two_factor_code)
         {
             if($user->two_factor_expires_at<now()) //expired
             {
@@ -33,6 +34,7 @@ class TwoFactor
                 return redirect()->route('verify.index');
             }
         }
+       
 
         return $next($request);
     }
