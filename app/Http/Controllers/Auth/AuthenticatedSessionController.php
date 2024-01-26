@@ -31,7 +31,7 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        if ($request->user()->has_second_auth){
+        if ($request->user()->verify_confirmation){
             $user=$request->user();
         $user->generateTwoFactorCode();
         $user->notify(new TwoFactorCode());
