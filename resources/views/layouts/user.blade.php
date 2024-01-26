@@ -9,7 +9,7 @@
 
 <!-- ajax -->
 
-<input data-id="{{$user->id}}" class="toggle-class" type="checkbox" data-onstyle="success" data-offstyle="danger" data-toggle="toggle" data-on="Enabled" data-off="Disabled" {{ $user->verify_confirmation ? 'checked' : '' }}>
+<input data-id="{{$user->id}}" class="toggle-class" type="checkbox" data-onstyle="success" data-offstyle="danger" data-toggle="toggle" name="toggle_second_auth" data-on="Enabled" data-off="Disabled" {{ $user->verify_confirmation ? 'checked' : '' }}>
 
 <script>
 $.ajax({
