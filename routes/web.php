@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
+use App\Models\User;
 
 use App\Mail\Notification;
 
@@ -42,7 +43,8 @@ Auth::routes([
     ]);
 
 Route::get('/dashboard', function () {
-    return view('layouts.user');
+    $user = Auth::user();
+    return view('layouts.user',['user' => $user]);
 })->middleware(['twofactor','auth'])->name('dashboard');
 
 Route::middleware('auth','twofactor')->group(function () {
@@ -129,3 +131,6 @@ Route::get('/item/edit/update/{id}', [App\Http\Controllers\HomeController::class
 
 Route::get('verify/resend', 'App\Http\Controllers\Auth\TwoFactorController@resend')->name('verify.resend');
 Route::resource('verify', 'App\Http\Controllers\Auth\TwoFactorController')->only(['index', 'store']);
+
+
+Route::post('/toggle-second-auth', 'App\Http\Controllers\Auth\TwoFactorController@toggleSecondAuth')->name('toggle_second_auth');

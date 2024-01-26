@@ -6,6 +6,44 @@
 
 <div class="container-fluid">
 
+
+<!-- ajax -->
+@csrf
+
+<input data-id="{{$user->id}}" class="toggle-class" type="checkbox" data-onstyle="success" data-offstyle="danger" data-toggle="toggle" data-on="Enabled" data-off="Disabled" {{ $user->verify_confirmation ? 'checked' : '' }}>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    $.ajaxSetup({
+  headers: {
+    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+  }
+});
+
+$.ajax({
+
+});
+    $(function() {
+    $('.toggle-class').change(function() {
+        var hasSecondAuth = $(this).prop('checked') == true ? 1 : 0;
+        var userId = $(this).data('id');
+
+        $.ajax({
+            type: "POST",
+            url: '/toggle-second-auth',
+            data: {'verify_confirmation': hasSecondAuth, 'user_id': userId},
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            success: function(data){
+                console.log(data.success)
+            }
+        });
+    })
+})
+</script>
+<!-- end ajax -->
+
+
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>

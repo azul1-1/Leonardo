@@ -37,6 +37,7 @@ class User extends Authenticatable implements MustVerifyEmail
         $this->notify(new MyCustomResetPassword($token));
     }
     protected $fillable = [
+        
         'name',
         'email',
         'password',

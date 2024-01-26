@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Notifications\TwoFactorCode;
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class TwoFactorController extends Controller
 {
@@ -45,4 +46,15 @@ class TwoFactorController extends Controller
 
         return redirect()->back()->withMessage('The two factor code has been sent again');
     }
+
+    public function toggleSecondAuth(Request $request)
+{
+    $user = User::find($request->user_id);
+    $user->verify_confirmation = $request->verify_confirmation;
+    $user->save();
+
+    return response()->json(['success'=>'Status change successfully.']);
+}
+
+
 }
