@@ -11279,3 +11279,127 @@ footer.sticky-footer .copyright {
 body.sidebar-toggled footer.sticky-footer {
   width: 100%;
 }
+
+
+.subscription-title h1{
+  color: white;
+  font-weight: 600;
+    line-height: 1.25;
+    font-size: 2.5rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem
+}
+
+
+
+
+.subscription {
+  color: white;
+}
+
+.subscription .title h3{
+
+  font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.25;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+}
+
+.subscription .title2 h3{
+
+  font-size: 1.25rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+.subscription .button2{
+  background-color: black;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  height: 3rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  border-radius: 0.25rem;
+  align-items: center;
+  border-width: 0px;
+  line-height: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: white;
+  font-size: 0.875rem;
+  
+}
+.subscription .button2 p{
+  color: white;
+}
+
+.subscription .title p{
+
+  font-size: 0.875rem;
+    line-height: 1.25rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+}
+
+.price-subscription span{
+  font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+}
+
+
+.mortage{
+  font-size: 0.875rem;
+    line-height: 1.25rem;
+    
+    margin-top: 0.25rem;
+    
+    margin-bottom: 1rem;
+
+}
+
+.subscription button{
+  padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    height: 3rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    border-radius: 0.25rem;
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: flex-end;
+    align-self: flex-end;
+    border-width: 0px;
+    line-height: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.subscription li{
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  text-decoration: underline dotted rgba(25, 24, 35, 0.60);
+    text-underline-offset: 0.25rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+}
+
+.subscription{
+  font-family:"DS Indigo",DSIndigo,"Neue Haas Grotesk",NeueHaasGrotesk,Helvetica,Arial,sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica Neue,Arial,"Noto Sans",sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+}

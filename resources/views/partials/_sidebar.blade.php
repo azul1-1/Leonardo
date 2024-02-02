@@ -80,6 +80,7 @@
             <h6 class="collapse-header">Login Screens:</h6>
             <a class="collapse-item" href="{{url('sell')}}">Sells</a>
             <a class="collapse-item" href="{{url('buy')}}">Buys</a>
+            <a class="collapse-item" href="{{url('subscription')}}">Subscriptions</a>
             
         </div>
     </div>

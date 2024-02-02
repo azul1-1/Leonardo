@@ -138,7 +138,16 @@ Route::post('/toggle-second-auth', 'App\Http\Controllers\VerifyController@toggle
 Route::get('/stripe','App\Http\Controllers\StripeController@index');
 Route::post('/stripeCheck','App\Http\Controllers\StripeController@checkout');
 Route::post('/stripeSuccess','App\Http\Controllers\StripeController@success');
+Route::get('/subscription', [App\Http\Controllers\SubscriptionController::class, 'index'])->middleware('auth');
+
+
 
 Route::any('{any}', function () {
     return redirect('/');
 })->where('any', '.*');
+
+
+
+/* ruta para subscripciones*/
+
+
