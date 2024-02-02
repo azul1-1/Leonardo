@@ -5835,6 +5835,7 @@ a.close.disabled {
   .modal-sm {
     max-width: 300px;
   }
+
 }
 
 @media (min-width: 992px) {
@@ -11403,3 +11404,28 @@ body.sidebar-toggled footer.sticky-footer {
 .subscription{
   font-family:"DS Indigo",DSIndigo,"Neue Haas Grotesk",NeueHaasGrotesk,Helvetica,Arial,sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica Neue,Arial,"Noto Sans",sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
 }
+
+@media(max-width: 576px){
+
+  .subscription-box{
+    border: 2px 0px 2px 0 solid black;
+  }
+  
+}
+@media(min-width: 576px){
+
+  .subscription-box{
+    border: 1px solid white;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+  }
+  .subscription-box-2{
+    border: 1px solid white;
+    border-right: 0;
+    border-bottom: 0;
+  }
+}
+
+
+

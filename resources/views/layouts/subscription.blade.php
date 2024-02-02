@@ -8,7 +8,7 @@
 
 <div class="container subscription">
   <div class="row">
-    <div class="col-3 border border-white title border-left-0 border-right-0 border-bottom-0">
+    <div class="subscription-box col-lg-3 col-sm-12 title">
       <div>
         <h3>Personal</h3>
         <p>Para particulares y propietarios individuales con necesidades básicas de firmas electrónicas</p>
@@ -34,7 +34,7 @@
 
       </div>
     </div>
-    <div class="col-3 border border-white title border-bottom-0 border-right-0  ">
+    <div class="subscription-box-2 col-lg-3 col-sm-12 title">
     <div>
         <h3>Standard</h3>
         <p>Para equipos de trabajo pequeños o medianos que necesitan enviar, firmar y colaborar</p>
@@ -61,7 +61,7 @@
 
       </div>
     </div>
-    <div class="col-3 border border-white title border-bottom-0 border-right-0 ">
+    <div class="subscription-box-2 col-lg-3 col-sm-12 title">
     <div>
         <h3>Business Pro</h3>
         <p>Para automatizar y optimizar acuerdos con funciones avanzadas</p>
@@ -93,7 +93,7 @@
 
       </div>
     </div>
-    <div class="col-3 border border-white title2 border-bottom-0 border-right-0">
+    <div id="subscription-box" class="subscription-box-2 col-lg-3 col-sm-12 title2 ">
     <div>
         <h3>¿Necesitas más funciones para tu equipo?</h3>
         <p>Personaliza un plan de precios escalable a las necesidades de tu empresa</p>
